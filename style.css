@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Magra:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Molengo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maitree:wght@300&display=swap");
+
+body {
+  background: rgb(42, 53, 121);
+  background: linear-gradient(
+    180deg,
+    rgba(42, 53, 121, 0.9850315126050421) 0%,
+    rgba(132, 214, 97, 1) 100%
+  );
+}
+img {
+  width: 400px;
+  border-radius: 10px;
+}
+.carousel1,
+.carousel2 {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.layout-row {
+  display: flex !important;
+}
+.container {
+  width: 75%;
+  margin: 0 auto;
+  min-height: 100vh;
+  background-color: #f7f5f2;
+  padding: 30px;
+}
+.heading {
+  width: 75%;
+  margin: 60px auto;
+  margin-bottom: 0;
+  background-color: #f7f5f2;
+  border-radius: 20px 20px 0 0;
+  padding: 30px;
+  background-image: url(images/backgroundimage.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: 100%;
+}
+h1 {
+  font-family: "Magra", sans-serif;
+  font-weight: 700;
+  font-size: 4em;
+  color: #f7f5f2;
+  margin: 0;
+}
+.carousel-mobile1,
+.carousel-mobile2,
+.arrows-container,
+.arrows-container2 {
+  display: none !important;
+}
+.intro {
+  text-align: center;
+  font-family: "Molengo", sans-serif;
+  font-size: 20px;
+  margin: 0 auto;
+  max-width: 50%;
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: inset rgba(129, 148, 167, 0.1);
+  border-radius: 10px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.text {
+  text-align: center;
+  font-family: "Molengo", sans-serif;
+  font-size: 20px;
+  max-width: 400px;
+}
+.containers {
+  display: flex !important;
+  justify-content: center;
+}
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+ul {
+  list-style: none;
+  padding: 0;
+}
+.slick-next,
+.slick-prev,
+.prev-slide,
+.next-slide,
+.prev-slide2,
+.next-slide2 {
+  border: none;
+  background-color: transparent;
+  font-size: 50px;
+  -webkit-text-stroke: 3px #f7f5f2;
+}
+.learn-more {
+  border: inset rgba(129, 148, 167, 0.1);
+  border-radius: 10px;
+}
+.learn-more-text {
+  text-align: center;
+  font-family: "Molengo", sans-serif;
+  font-size: 20px;
+}
+footer {
+  width: 75%;
+  margin: 60px auto;
+  margin-top: 0;
+  background-color: black;
+  border-radius: 0 0 20px 20px;
+  padding: 30px;
+  color: #f7f5f2;
+}
+.contact-us {
+  font-family: "Maitree", serif;
+  text-align: center;
+  font-size: 15px;
+}
+.trip-advisor {
+  font-family: "Maitree", serif;
+  display: block;
+  margin: 0 auto;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  color: #f7f5f2;
+  font-weight: 700;
+  transition: all 150ms ease-in-out;
+}
+a:hover {
+  cursor: pointer;
+  font-size: 16px;
+}
+@media screen and (max-width: 1200px) {
+  .carousel-mobile1,
+  .carousel-mobile2 {
+    display: flex !important;
+  }
+  .carousel1,
+  .carousel2 {
+    display: none !important;
+  }
+  .arrows-container,
+  .arrows-container2 {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 800px) {
+  .intro {
+    max-width: none;
+    margin-bottom: 15px;
+  }
+  .heading {
+    background-size: 120%;
+  }
+}
+@media screen and (max-width: 610px) {
+  h1 {
+    font-size: 3em;
+  }
+}
+@media screen and (max-width: 550px) {
+  img,
+  .info {
+    max-width: 250px;
+    max-height: 400px;
+  }
+}
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size: 2em;
+  }
+}
