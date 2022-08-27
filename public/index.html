@@ -14,22 +14,102 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+      integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+      crossorigin=""
+    />
+    <script
+      src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+      integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+      crossorigin=""
+    ></script>
   </head>
+
   <body>
-    <div class="heading">
+    <div class="heading container">
       <h1>Kidichi Butterfly Spice Farm</h1>
     </div>
+    <nav class="container navbar navbar-expand-lg bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#grid">Our Farm</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#about"
+                >About</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#carousel1">The Tour</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Our Services
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#carousel2">Tour Guide</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel2">Fruits Tasting</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel2">Spice Tasting</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel2">Decorations</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="#carousel2"
+                    >Coconut Climbing</a
+                  >
+                </li>
+              </ul>
+            </li>
+          </ul>
+          </form>
+        </div>
+      </div>
+    </nav>
     <div class="container">
       <p class="intro">
         Welcome to the paradize on Earth! <br />
         Let Kidichi Butterfly Farm take you on an exciting journey <br />
         to the world of exotic fruits and spices on the unique tour!
       </p>
+
+      <div id="grid"></div>
+
       <div class="carousel-mobile1">
         <div class="containers">
-          <img src="carousel1/img8.jpeg" />
+          <img src="./carousel1/img8.jpeg" />
         </div>
         <div class="Info">
           <p class="about1 text">
@@ -45,7 +125,7 @@
           </p>
         </div>
         <div class="containers">
-          <img src="carousel1/img7.jpeg" />
+          <img src="./carousel1/img7.jpeg" />
         </div>
         <div class="Info">
           <p class="about2 text">Spice plants:</p>
@@ -61,7 +141,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img5.jpeg" />
+          <img src="./carousel1/img5.jpeg" />
         </div>
         <div class="Info">
           <p class="about3 text">Tropical fruit trees:</p>
@@ -75,7 +155,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img2.jpeg" />
+          <img src="./carousel1/img2.jpeg" />
         </div>
         <div class="Info">
           <p class="about4 text">Medicine plants:</p>
@@ -87,7 +167,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img6.jpeg" />
+          <img src="./carousel1/img6.jpeg" />
         </div>
         <div class="Info">
           <p class="about5 text">Cosmetic plants:</p>
@@ -108,9 +188,9 @@
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </button>
       </div>
-      <div class="carousel1 layout-row">
+      <div class="carousel1 layout-row" id="carousel1">
         <div class="containers">
-          <img src="carousel1/img8.jpeg" />
+          <img src="./carousel1/img8.jpeg" />
         </div>
         <div class="Info">
           <p class="about1 text">
@@ -126,7 +206,7 @@
           </p>
         </div>
         <div class="containers">
-          <img src="carousel1/img7.jpeg" />
+          <img src="./carousel1/img7.jpeg" />
         </div>
         <div class="Info">
           <p class="about2 text">Spice plants:</p>
@@ -142,7 +222,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img5.jpeg" />
+          <img src="./carousel1/img5.jpeg" />
         </div>
         <div class="Info">
           <p class="about3 text">Tropical fruit trees:</p>
@@ -156,7 +236,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img2.jpeg" />
+          <img src="./carousel1/img2.jpeg" />
         </div>
         <div class="Info">
           <p class="about4 text">Medicine plants:</p>
@@ -168,7 +248,7 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel1/img6.jpeg" />
+          <img src="./carousel1/img6.jpeg" />
         </div>
         <div class="Info">
           <p class="about5 text">Cosmetic plants:</p>
@@ -189,7 +269,7 @@
       </p>
       <div class="carousel-mobile2">
         <div class="containers">
-          <img src="carousel2/img2.jpeg" />
+          <img src="./carousel2/img2.jpeg" />
         </div>
         <div class="Info">
           <p class="activities1 text">Organic Spice Farm tour</p>
@@ -202,14 +282,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img3.jpeg" />
+          <img src="./carousel2/img3.jpeg" />
         </div>
         <div class="Info">
           <p class="activities2 text">
             Spice Farm tour without lunch includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -217,14 +296,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img5.jpeg" />
+          <img src="./carousel2/img5.jpeg" />
         </div>
         <div class="Info">
           <p class="activities3 text">
             Spice Farm tour with delicious lunch includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -233,14 +311,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img6.jpeg" />
+          <img src="./carousel2/img6.jpeg" />
         </div>
         <div class="Info">
           <p class="activities4 text">
             Spice Farm tour with lunch and cooking class includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -257,9 +334,9 @@
           <i class="fa fa-angle-right" aria-hidden="true"></i>
         </button>
       </div>
-      <div class="carousel2 layout-row">
+      <div class="carousel2 layout-row" id="carousel2">
         <div class="containers">
-          <img src="carousel2/img2.jpeg" />
+          <img src="./carousel2/img2.jpeg" />
         </div>
         <div class="Info">
           <p class="activities1 text">Organic Spice Farm tour</p>
@@ -272,14 +349,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img3.jpeg" />
+          <img src="./carousel2/img3.jpeg" />
         </div>
         <div class="Info">
           <p class="activities2 text">
             Spice Farm tour without lunch includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -287,14 +363,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img5.jpeg" />
+          <img src="./carousel2/img5.jpeg" />
         </div>
         <div class="Info">
           <p class="activities3 text">
             Spice Farm tour with delicious lunch includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -303,14 +378,13 @@
           </ul>
         </div>
         <div class="containers">
-          <img src="carousel2/img6.jpeg" />
+          <img src="./carousel2/img6.jpeg" />
         </div>
         <div class="Info">
           <p class="activities4 text">
             Spice Farm tour wit lunch and cooking class includes:
           </p>
           <ul class="text">
-            <li>Taxi</li>
             <li>Guide</li>
             <li>Fruits tasting</li>
             <li>Spices tasting</li>
@@ -319,7 +393,7 @@
           </ul>
         </div>
       </div>
-      <div class="learn-more">
+      <div class="learn-more" id="about">
         <p class="learn-more-text">
           In the 16th century, Zanzibar became a real gourmet paradise.
           Portuguese traders from South America and India brought hundreds of
@@ -348,8 +422,9 @@
           >
         </p>
       </div>
+      <div id="map"></div>
     </div>
-    <footer class="contact-text">
+    <footer class="container contact-text">
       <p class="contact-us">
         Kidichi Butterfly Spice Farm Zanzibar <br />
         Open 9 am - 6 pm<br />
@@ -361,17 +436,18 @@
         >TripAdvisor</a
       >
     </footer>
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-1.11.0.min.js"
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+      integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+      crossorigin="anonymous"
     ></script>
     <script
-      type="text/javascript"
-      src="//code.jquery.com/jquery-migrate-1.2.1.min.js"
-    ></script>
-    <script
-      type="text/javascript"
-      src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.min.js"
+      integrity="sha384-ODmDIVzN+pFdexxHEHFBQH3/9/vQ9uori45z4JjnFsRydbmQbmL5t1tQ0culUzyK"
+      crossorigin="anonymous"
     ></script>
     <script type="text/javascript" src="app.js"></script>
   </body>

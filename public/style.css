@@ -26,7 +26,7 @@ img {
 .container {
   width: 75%;
   margin: 0 auto;
-  min-height: 100vh;
+  /* min-height: 100vh; */
   background-color: #f7f5f2;
   padding: 30px;
 }
@@ -74,6 +74,7 @@ h1 {
   font-size: 20px;
   max-width: 400px;
   margin: 0 auto;
+  padding-left: 0;
 }
 .containers {
   display: flex !important;
@@ -106,15 +107,17 @@ ul {
   text-align: center;
   font-family: "Molengo", sans-serif;
   font-size: 20px;
+  padding: 10px;
 }
 footer {
   width: 75%;
   margin: 60px auto;
   margin-top: 0;
-  background-color: black;
+  background-color: black !important;
   border-radius: 0 0 20px 20px;
   padding: 30px;
   color: #f7f5f2;
+  
 }
 .contact-us {
   font-family: "Maitree", serif;
@@ -182,4 +185,67 @@ a:hover {
   h1 {
     font-size: 2em;
   }
+}
+
+
+#map{
+  height: 350px;
+  margin-top: 30px;
+}
+
+.leaflet-control-attribution.leaflet-control{
+  display:none
+}
+
+#grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+  grid-gap: 2px;
+  grid-auto-rows: min-max(80px, auto);
+  grid-auto-flow: dense;
+  margin: 50px 0 50px 0;
+}
+
+#grid .c-1 {
+  background: #1a535c;
+  color: #ddd;
+}
+
+#grid .c-2 {
+  background: #4ecdc4;
+}
+
+#grid .c-3 {
+  background: #bfd7ea;
+}
+
+#grid .c-4 {
+  background: #ff6b6b;
+}
+
+#grid .c-5 {
+  background: #ffe66d;
+}
+
+#grid .card {
+  min-height: 100px;
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+#grid .span-1 {
+  grid-column-end: span 1;
+  grid-row-end: span 1;
+  min-height: 100px;
+}
+#grid .span-2 {
+  grid-column-end: span 2;
+  grid-row-end: span 2;
+  min-height: 200px;
+}
+
+#grid .span-3 {
+  grid-column-end: span 3;
+  grid-row-end: span 3;
+  min-height: 400px;
 }

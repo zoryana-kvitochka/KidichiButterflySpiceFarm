@@ -46,3 +46,82 @@ $(document).ready(function () {
     autoplaySpeed: 6000,
   });
 });
+
+//leeflet script
+
+var map = L.map("map").setView([-6.081562738627017, 39.252117620559474], 5, {
+  animate: true,
+  pan: {
+    duration: 10,
+  },
+});
+
+// let timer = setInterval(() => {
+//   for (let i = 0; i <= 12; i++) {
+//     setTimeout(() => {
+//       map.setZoom(5 + i);
+//     }, 400 * i);
+//   }
+// }, 5000);
+
+var tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  maxZoom: 19,
+  attribution:
+    '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+}).addTo(map);
+
+var marker = L.marker([-6.081562738627017, 39.252117620559474])
+  .addTo(map)
+  .bindPopup("Farm");
+// .openPopup();
+
+var circle = L.circle([-6.0816, 39.253], {
+  color: "red",
+  fillColor: "#f03",
+  fillOpacity: 0.5,
+  radius: 300,
+})
+  .addTo(map)
+  .bindPopup("I am a circle.");
+
+// var polygon = L.polygon([
+//   [51.509, -0.08],
+//   [51.503, -0.06],
+//   [51.51, -0.047],
+// ])
+//   .addTo(map)
+//   .bindPopup("I am a polygon.");
+
+// var popup = L.popup()
+//   .setLatLng([51.513, -0.09])
+//   .setContent("I am a standalone popup.")
+//   .openOn(map);
+
+// function onMapClick(e) {
+//   popup
+//     .setLatLng(e.latlng)
+//     .setContent("You clicked the map at " + e.latlng.toString())
+//     .openOn(map);
+// }
+
+//map.on("click", onMapClick);
+map.on("mouseover", () => {
+  clearInterval(timer);
+});
+
+//grid
+
+let grid = document.querySelector("#grid");
+
+for (let i = 0; i < 20; i++) {
+  let div = document.createElement("div");
+  if (i == 17) {
+    div.className = `card span-1 c-${i % 5 || 5}`;
+    div.style = `background-image: url(./gallery_grid/img${i}.jpg)`;
+    grid.append(div);
+    continue;
+  }
+  div.className = `card span-${i % 3 || (i < 11 ? 3 : 1)} c-${i % 5 || 5}`;
+  div.style = `background-image: url(./gallery_grid/img${i}.jpg)`;
+  grid.append(div);
+}
