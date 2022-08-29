@@ -11,6 +11,20 @@ $(document).ready(function () {
     prevArrow: $(".prev-slide"),
     nextArrow: $(".next-slide"),
   });
+  window.onresize = function () {
+    $(".carousel-mobile1").slick({
+      infinite: true,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      arrows: true,
+      prevArrow:
+        "<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+      nextArrow:
+        "<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+      prevArrow: $(".prev-slide"),
+      nextArrow: $(".next-slide"),
+    });
+  };
   $(".carousel1").slick({
     infinite: true,
     slidesToShow: 2,
@@ -49,12 +63,7 @@ $(document).ready(function () {
 
 //leeflet script
 
-var map = L.map("map").setView([-6.081562738627017, 39.252117620559474], 5, {
-  animate: true,
-  pan: {
-    duration: 10,
-  },
-});
+var map = L.map("map").setView([-6.087700843811035, 39.24043273925781], 16);
 
 // let timer = setInterval(() => {
 //   for (let i = 0; i <= 12; i++) {
@@ -70,27 +79,32 @@ var tiles = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
     '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
 }).addTo(map);
 
-var marker = L.marker([-6.081562738627017, 39.252117620559474])
-  .addTo(map)
-  .bindPopup("Farm");
+// var marker = L.marker([-6.087700843811035, 39.24043273925781])
+//   .addTo(map)
+//   .bindPopup("Farm");
 // .openPopup();
 
-var circle = L.circle([-6.0816, 39.253], {
-  color: "red",
-  fillColor: "#f03",
-  fillOpacity: 0.5,
-  radius: 300,
-})
-  .addTo(map)
-  .bindPopup("I am a circle.");
-
-// var polygon = L.polygon([
-//   [51.509, -0.08],
-//   [51.503, -0.06],
-//   [51.51, -0.047],
-// ])
+// var circle = L.circle([-6.0878, 39.241], {
+//   color: "red",
+//   fillColor: "#f03",
+//   fillOpacity: 0.5,
+//   radius: 300,
+// })
 //   .addTo(map)
-//   .bindPopup("I am a polygon.");
+//   .bindPopup("I am a circle.");
+
+var polygon = L.polygon([
+  // [-6.0869, 39.239],
+  // [-6.0869, 39.2407],
+  // [-6.0878, 39.2405],
+  // [-6.0878, 39.2403],
+  [-6.0869, 39.239],
+  [-6.086767320046641, 39.24113007429308],
+  [-6.088132867316903, 39.24132319332665],
+  [-6.088452916956269, 39.239692410376506],
+])
+  .addTo(map)
+  .bindPopup("We're here!");
 
 // var popup = L.popup()
 //   .setLatLng([51.513, -0.09])
@@ -105,9 +119,9 @@ var circle = L.circle([-6.0816, 39.253], {
 // }
 
 //map.on("click", onMapClick);
-map.on("mouseover", () => {
-  clearInterval(timer);
-});
+// map.on("mouseover", () => {
+//   clearInterval(timer);
+// });
 
 //grid
 

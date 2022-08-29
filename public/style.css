@@ -14,14 +14,12 @@ img {
   width: 400px;
   border-radius: 10px;
 }
-.carousel1,
-.carousel2 {
+.slick-slider.carousel1,
+.slick-slider.carousel2 {
   height: 100%;
   width: 100%;
   margin-bottom: 50px;
-}
-.layout-row {
-  display: flex !important;
+  display:flex;
 }
 .container {
   width: 75%;
@@ -49,11 +47,11 @@ h1 {
   color: #f7f5f2;
   margin: 0;
 }
-.carousel-mobile1,
-.carousel-mobile2,
+.slick-slider.carousel-mobile1,
+.slick-slider.carousel-mobile2,
 .arrows-container,
 .arrows-container2 {
-  display: none !important;
+  display: none;
 }
 .intro {
   text-align: center;
@@ -140,9 +138,9 @@ a:hover {
   font-size: 16px;
 }
 @media screen and (max-width: 1200px) {
-  .carousel-mobile1,
-  .carousel-mobile2 {
-    display: flex !important;
+  .slick-slider.carousel-mobile1,
+  .slick-slider.carousel-mobile2 {
+    display: flex;
   }
   .carousel1,
   .carousel2 {
