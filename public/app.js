@@ -59,6 +59,15 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 6000,
   });
+  $(".carousel-reviews").slick({
+    centerMode: true,
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3500,
+  });
 });
 
 //leeflet script

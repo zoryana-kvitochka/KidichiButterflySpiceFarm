@@ -21,6 +21,10 @@ img {
   margin-bottom: 50px;
   display:flex;
 }
+.carousel-reviews {
+  margin: 0 auto;
+  max-width: 850px;
+}
 .container {
   width: 75%;
   margin: 0 auto;
@@ -98,14 +102,29 @@ ul {
   -webkit-text-stroke: 3px #f7f5f2;
 }
 .learn-more {
+  flex-direction: center;
+  align-items: center;
+  justify-content: center;
   border: inset rgba(129, 148, 167, 0.1);
   border-radius: 10px;
+  flex-wrap: wrap;
 }
 .learn-more-text {
   text-align: center;
   font-family: "Molengo", sans-serif;
   font-size: 20px;
   padding: 10px;
+}
+.review {
+  border: inset rgba(129, 148, 167, 0.1);
+  border-radius: 10px;
+  width: 75%;
+  max-width: 700px;
+  padding: 30px;
+  border-color: #8e093f;
+  font-size: 20px;
+  margin: 30px;
+  font-size: 20px
 }
 footer {
   width: 75%;
@@ -265,4 +284,8 @@ a:hover {
   grid-column-end: span 3;
   grid-row-end: span 3;
   min-height: 400px;
+}
+
+.italic {
+  font-style: italic;
 }
