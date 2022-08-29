@@ -127,15 +127,22 @@ var polygon = L.polygon([
 
 let grid = document.querySelector("#grid");
 
-for (let i = 0; i < 20; i++) {
+for (let i = 0; i < 158; i++) {
   let div = document.createElement("div");
-  if (i == 17) {
-    div.className = `card span-1 c-${i % 5 || 5}`;
-    div.style = `background-image: url(./gallery_grid/img${i}.jpg)`;
-    grid.append(div);
-    continue;
-  }
   div.className = `card span-${i % 3 || (i < 11 ? 3 : 1)} c-${i % 5 || 5}`;
   div.style = `background-image: url(./gallery_grid/img${i}.jpg)`;
   grid.append(div);
 }
+
+function expand() {
+  if (btn.innerHTML == "Click to see more exciting photos!") {
+    grid.style.maxHeight = "initial";
+    btn.innerHTML = "Hide";
+  } else {
+    grid.style.maxHeight = "1200px";
+    btn.innerHTML = "Click to see more exciting photos!";
+  }
+}
+
+let btn = document.querySelector("#expand");
+btn.addEventListener("click", expand);

@@ -195,6 +195,23 @@ a:hover {
   display:none
 }
 
+#expand {
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  background: #8e093f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  line-height: 1.5;
+  font-size: 17px;
+  border: none;
+  box-shadow: 1px 3px 3px rgb(0 0 0 / 30%);
+  border-color: #8e093f;
+  transition: all 200ms ease-in-out;
+}
+
 #grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -202,6 +219,8 @@ a:hover {
   grid-auto-rows: min-max(80px, auto);
   grid-auto-flow: dense;
   margin: 50px 0 50px 0;
+  max-height: 1200px;
+  overflow: hidden;
 }
 
 #grid .c-1 {
