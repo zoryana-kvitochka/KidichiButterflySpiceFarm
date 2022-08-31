@@ -19,7 +19,7 @@ img {
   height: 100%;
   width: 100%;
   margin-bottom: 50px;
-  display:flex;
+  display: flex;
 }
 .carousel-reviews {
   margin: 0 auto;
@@ -56,6 +56,10 @@ h1 {
 .arrows-container,
 .arrows-container2 {
   display: none;
+}
+.arrows-container3 {
+  display: flex;
+  justify-content: center;
 }
 .intro {
   text-align: center;
@@ -95,7 +99,9 @@ ul {
 .prev-slide,
 .next-slide,
 .prev-slide2,
-.next-slide2 {
+.next-slide2,
+.prev-slide3,
+.next-slide3 {
   border: none;
   background-color: transparent;
   font-size: 50px;
