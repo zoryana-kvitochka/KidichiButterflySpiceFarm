@@ -74,6 +74,22 @@ $(document).ready(function () {
     autoplay: true,
     autoplaySpeed: 3500,
   });
+
+  $.ajax({
+    url: "./gallery_grid",
+    success: function (data) {
+      $(data)
+        .find("a")
+        .attr("href", function (i, val) {
+          if (val.match(/\.(jpg|jpe?g|png|gif)$/)) {
+            let div = document.createElement("div");
+            div.className = `card span-3 c-5`;
+            div.style = `background-image: url(./${val})`;
+            grid.append(div);
+          }
+        });
+    },
+  });
 });
 
 var map = L.map("map").setView([-6.087700843811035, 39.24043273925781], 16);
@@ -94,13 +110,6 @@ var polygon = L.polygon([
   .bindPopup("We're here!");
 
 let grid = document.querySelector("#grid");
-
-for (let i = 0; i < 158; i++) {
-  let div = document.createElement("div");
-  div.className = `card span-3 c-5`;
-  div.style = `background-image: url(./gallery_grid/img${i}.jpg)`;
-  grid.append(div);
-}
 
 function expand() {
   if (btn.innerHTML == "Click to see more exciting photos!") {
